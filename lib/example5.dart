@@ -3,17 +3,18 @@ import 'package:built_value_examples/models/group.dart';
 import 'package:built_value_examples/models/user.dart';
 
 void example5() {
-  final Group group = new Group((b) => b
+  final Group group = Group((b) => b
     ..name = 'First Group'
-    ..users = new BuiltList<User>(
+    ..users = BuiltList<User>(
       [
-        new User((b) => b
+        User((b) => b
           ..name = 'Bob'
           ..age = 45),
       ],
     ).toBuilder());
 
   final Group secondGroup = group.rebuild((b) => b
+  ..name = 'Second group'
     ..users.update((b) => b
       ..add(User((b) => b
         ..name = 'Alice'
@@ -21,4 +22,5 @@ void example5() {
 
   print('First group: $group');
   print('Second group: $secondGroup');
+  print('First group: $group');
 }
