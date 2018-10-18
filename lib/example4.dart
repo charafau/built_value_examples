@@ -11,7 +11,7 @@ void example4(){
 
   print('first list is: $numbers');
   print('filtered numbers list is: $filteredNumbers');
-
+  print('first list is: $numbers');
 
 
   // same thing for map

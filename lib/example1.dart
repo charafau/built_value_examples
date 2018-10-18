@@ -25,4 +25,5 @@ void example1() {
   final olderBob = bob.rebuild((b) => b..age = 52);
 
   print('we can copy bob $olderBob');
+  print('First bob $bob');
 }
